@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "learn-oauth-errors-with-python-social-auth"
+version = "0.1.0"
+description = ""
+authors = ["Yuuki Takahashi <20282867+yktakaha4@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "learn_oauth_errors_with_python_social_auth"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
