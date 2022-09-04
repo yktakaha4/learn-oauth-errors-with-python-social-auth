@@ -8,7 +8,8 @@ packages = [{include = "learn_oauth_errors_with_python_social_auth"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-
+Django = "^4.1"
+social-auth-app-django = "^5.0.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.8.0"

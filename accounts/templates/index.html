@@ -1,0 +1,64 @@
+<html lang="ja">
+  <body>
+    <h1>learn-oauth-errors-with-python-social-auth</h1>
+
+    <h2>Menu</h2>
+
+    <div>
+      <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
+    </div>
+    <div>
+      <a href="{% url 'logout' %}">Logout</a>
+    </div>
+
+    <hr />
+
+    {% if error_message %}
+    <div style="color: red">{{ error_message }}</div>
+    {% endif %}
+
+    <h2>AuthUser</h2>
+
+    <table border="1">
+      <tr>
+        <th>id</th>
+        <td>{{ user.id }}</td>
+      </tr>
+      <tr>
+        <th>username</th>
+        <td>{{ user.username }}</td>
+      </tr>
+      <tr>
+        <th>last_login</th>
+        <td>{{ user.last_login }}</td>
+      </tr>
+      <tr>
+        <th>is_authenticated</th>
+        <td>{{ user.is_authenticated }}</td>
+      </tr>
+    </table>
+
+    <h2>UserSocialAuth</h2>
+
+    {% if auth %}
+    <table border="1">
+      <tr>
+        <th>provider</th>
+        <td>{{ auth.provider }}</td>
+      </tr>
+      <tr>
+        <th>extra_data</th>
+        <td>{{ auth.extra_data }}</td>
+      </tr>
+      <tr>
+        <th>created</th>
+        <td>{{ auth.created }}</td>
+      </tr>
+      <tr>
+        <th>modified</th>
+        <td>{{ auth.modified }}</td>
+      </tr>
+    </table>
+    {% else %} None {% endif %}
+  </body>
+</html>
