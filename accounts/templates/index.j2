@@ -1,5 +1,5 @@
 {% load custom_tags %}
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,7 +25,7 @@
       </header>
 
       <main>
-        <h1>Accounts</h1>
+        <h1>アカウント</h1>
 
         {% for message in messages %}
         {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
@@ -39,17 +39,17 @@
 
         <div class="mb-5">
           {% if user.is_authenticated %}
-          <p class="fs-3">Hello, {{ user.username }}!</p>
+          <p class="fs-3">こんにちは、{{ user.username }}!</p>
           {% else %}
-          <p class="fs-3">Hello, Guest!</p>
+          <p class="fs-3">こんにちは、Guest!</p>
           {% endif %}
           <a
             href="{% url 'social:begin' 'github' %}"
             class="btn btn-primary btn-lg px-4"
-            >Login with GitHub</a
+            >GitHubアカウントでログイン</a
           >
           <a href="{% url 'logout' %}" class="btn btn-secondary btn-lg px-4"
-            >Logout</a
+            >ログアウト</a
           >
         </div>
 
