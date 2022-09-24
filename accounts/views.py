@@ -3,7 +3,7 @@ from social_django.models import UserSocialAuth
 
 
 class AccountView(TemplateView):
-    template_name = "index.html"
+    template_name = "index.j2"
 
     def get(self, request, *args, **kwargs):
 
