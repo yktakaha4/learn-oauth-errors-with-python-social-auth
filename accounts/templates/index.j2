@@ -38,6 +38,11 @@
         {% endfor %}
 
         <div class="mb-5">
+          {% if user.is_authenticated %}
+          <p class="fs-3">Hello, {{ user.username }}!</p>
+          {% else %}
+          <p class="fs-3">Hello, Guest!</p>
+          {% endif %}
           <a
             href="{% url 'social:begin' 'github' %}"
             class="btn btn-primary btn-lg px-4"
