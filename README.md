@@ -1,5 +1,7 @@
 # learn-oauth-errors-with-python-social-auth
 
+https://speakerdeck.com/yktakaha4/python-social-authdexue-bu-oauth2-dot-0ren-ke-kodohuroniokeruyi-chang-xi-henodui-chu
+
 ## Prerequirements
 
 - Python 3.10
